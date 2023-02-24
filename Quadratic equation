@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+void main()
+{
+	int a,b,c,d,r1,r2;
+	printf("The form of the quadratic equation : ax^2+bx+c\n");
+	printf("Enter 3 roots of a quadratic equation\n");
+	printf("a = ");
+	scanf("%d",&a);
+	printf("\nb = ");
+	scanf("%d",&b);
+	printf("\nc = ");
+	scanf("%d",&c);
+	d=((b*b)-(4*a*c));
+    printf("\nThe value of the quadratic equation is %d\n",d);
+	r1=(-b+sqrt(d))/2;
+	r2=(-b-sqrt(d))/2;
+	printf("The roots r1 and r2 are %d, %d\n",r1,r2);
+	printf("\nThe value of b^2-4ac is %d\n",d);
+	if(d>0)
+	printf("The roots are real and unequal\n");
+	if(d==0)
+	printf("The roots are real and equal\n");
+	if(d<0)
+	printf("The roots are imagnary");	
+}
