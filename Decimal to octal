@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main() 
+{
+    int octalNumber[10], number, i, j;
+    printf("\nEnter the Decimal Number to Convert to Octal :  ");
+    scanf("%d", &number);
+    for(i = 0; number > 0; i++)
+    {
+        octalNumber[i] = number % 8;
+        number = number / 8;
+    }
+    
+    printf("\n Equivalent Octal Number of a Given Number =  ");
+    for(j = i - 1; j >= 0; j--)  
+    {
+        printf("%d", octalNumber[j]);
+    }
+    return 0;
+}
