@@ -1,0 +1,24 @@
+#include <stdio.h>
+main(void)
+{
+	int n,temp,t,a;
+	printf("Enter a number : ");
+	scanf("%d",&n);
+	temp=n;
+	t=n%10;
+	if(t!=0)
+	{
+		printf("The least significant digit number of the given number is %d\n",t);
+	}
+	else
+	{
+		a=n/10;
+		t=a%10;
+		printf("The least significant digit number of the given number is %d\n",t);
+	}
+	while(n!=0)
+	{
+		temp=n%10;
+		n=n/10;
+	}printf("The most significant digit number of the given number is  %d\n",temp);
+}
