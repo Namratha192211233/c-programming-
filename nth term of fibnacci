@@ -1,0 +1,16 @@
+#include <stdio.h>
+main(void)
+{
+	int n,f1,f2,fib,t;
+	printf("Enter a number : ");
+	scanf("%d",&n);
+	f1=0,f2=1,t=1;
+	do
+	{
+		fib=f1+f2;
+		f1=f2;
+		f2=fib;
+		t=t+1;
+	}while(t<=n);
+	printf("the %dth term of fibonacci series is : %d",n,fib);
+}
