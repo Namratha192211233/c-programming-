@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char str[100];
+    int i;
+    int words=1,letter=0,space=0;
+    printf("Please enter the string \n");
+    gets(str);
+
+    for(i=0; str[i] != '\0'; i++){
+
+            if(str[i]!=' ')
+            {
+                letter++;
+            }
+             else if(str[i]==' ' || str[i] != '\n' || str[i] != '\t')
+            {
+                words++;
+            }
+    }
+printf("\nTotal words : %d ",words);
+printf("\nTotal letters : %d",letter);
+    return 0;
+}
