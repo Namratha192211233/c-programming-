@@ -1,0 +1,16 @@
+#include <stdio.h>
+void main()
+{
+   int n,r=0,s;
+   printf("Enter a  number to reverse\n");
+   scanf("%d",&n);
+   while(n!=0)
+   {
+   s=n%10;
+   r=r*10+s;
+   n=n/10;
+   }
+   printf("The reverse of the number is %d",&r);
+}   
+Footer
+© 2023 GitHub, Inc
