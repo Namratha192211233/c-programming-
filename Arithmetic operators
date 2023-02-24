@@ -1,0 +1,42 @@
+#include <stdio.h>
+main(void)
+{
+	float a,b;
+	int c,d;
+	again:
+	printf("Enter value of a : ");
+	scanf("%f",&a);
+	printf("Enter value of b : ");
+	scanf("%f",&b);
+	options:
+	printf("1.addition\n2.subraction\n3.multiplication\n4.division\n");
+	printf("Enter your choice : ");
+	scanf("%d",&c);
+	switch(c)
+	{
+	case 1:printf("The addition of two numbers %.0f and %.0f is %.3f\n",a,b,a+b);break;
+	case 2:printf("The subraction of two numbers %.0f and %.0f is %.3f\n",a,b,a-b);break;
+	case 3:printf("The multiplication of two numbers %.0f and %.0f is %.3f\n",a,b,a*b);break;
+	case 4:printf("The division of two numbers %.0f and %.0f is %.3f\n",a,b,a/b);break;
+	default:
+		printf("Invalid option !\nselect other option : ");
+		goto options;
+	}
+	use:
+	printf("Do you want to use calculater again ?\n");
+	printf("type 1 if yes\ntype 2 if no");
+	scanf("%d",&d);
+	if(d==1)
+	{
+		goto again;
+	}
+	else if(d==2)
+	{
+		printf("\t\t-----Thank you for using-----\t\t");
+	}
+	else
+	{
+		printf("Invalid option !\n please select a other option : ");
+		goto use;
+	}
+}
